@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+
+      var john = {
+        bill : [124,48,268,180,42],
+        tipCalc : function(){
+
+          this.tipRay = [];
+          this.fRay = [];
+
+          var per;
+
+          for(var i = 0 ; i < this.bill.length ; i++){
+
+            if (this.bill[i] < 50){
+              per = 20/100;
+            }
+            else if (this.bill[i] >= 50 && this.bill[i] < 200){
+              per = 15/100;
+            }
+            else {
+              per = 10/100;
+            }
+
+            this.tipRay[i]= this.bill[i]*per;
+            this.fRay[i]=this.bill[i]+this.tipRay[i];
+
+
+
+          }
+        }
+      };
+
+      john.tipCalc();
+      console.log(john.tipRay);
+      console.log(john.fRay);
+
+      var mark = {
+        bill : [77,375,110,45],
+        tipCalc : function(){
+
+          this.tipRay = [];
+          this.fRay = [];
+
+          var per;
+
+          for(var i = 0 ; i < this.bill.length ; i++){
+
+            if (this.bill[i] < 100){
+              per = 20/100;
+            }
+            else if (this.bill[i] >= 100 && this.bill[i] < 300){
+              per = 10/100;
+            }
+            else {
+              per = 25/100;
+            }
+
+            this.tipRay[i]= this.bill[i]*per;
+            this.fRay[i]=this.bill[i]+this.tipRay[i];
+
+
+
+          }
+        }
+      };
+
+      mark.tipCalc();
+      console.log(mark.tipRay);
+      console.log(mark.fRay);
+
+      function avgTip(name) {
+        var sum=0;
+        for (var i=0 ; i < name.tipRay.length ; i++ ){
+          sum = sum+name.tipRay[i];
+        }
+
+        var avg = sum/name.tipRay.length;
+        return avg;
+        console.log(avg);
+
+
+      }
+
+      avgTip(john);
+      avgTip(mark);
+
+      if (avgTip(john)>avgTip(mark)){
+        console.log("john paid higher");
+      }
+      else if (avgTip(john)<avgTip(mark)){
+        console.log("mark paid higher");
+      }
+      else{
+        console.log("paid same");
+      }
+
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

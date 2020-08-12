@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var John = {
+        name: "John",
+        mass : 58,
+        height : 1.8,
+
+        BMI : function(){
+          return this.mass/(this.height*this.height);
+        }
+      };
+
+      var JB=John.BMI();
+
+      var Mark = {
+        name: "Mark",
+        mass : 55,
+        height : 1.6,
+
+        BMI : function(){
+          return this.mass/(this.height*this.height);
+        }
+      };
+
+      var MB=Mark.BMI();
+
+      if (JB>MB){
+        console.log(John.name+" has higher BMI i.e."+JB);
+      }
+      else if(JB<MB)  {
+        console.log(Mark.name+" has higher BMI i.e."+MB);
+      }
+      else{
+        console.log("draw");
+      }
+
+
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+
+      function tip(bill) {
+        if (bill<50){
+          return bill*20/100;
+        }
+        else if (bill>=50 && bill<200) {
+          return bill*15/100;
+        }
+        else{
+          return bill*10/100;
+        }
+
+      }
+
+      var bray = [124,48,268]
+
+      var Tray = [tip(bray[0]),tip(bray[1]),tip(bray[2])];
+      var toRay = [bray[0]+Tray[0],bray[1]+Tray[1],bray[2]+Tray[2]];
+
+      console.log(Tray,toRay);
+
+
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
